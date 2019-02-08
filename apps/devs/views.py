@@ -10,3 +10,6 @@ def success(request):
 def devreg(request):
     return render(request, 'devs/register.html')
 
+def languages(request):
+    return render(request, 'devs/languages.html')
+

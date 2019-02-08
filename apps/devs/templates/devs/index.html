@@ -6,7 +6,8 @@
     <title>Devs on deck</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'users/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'devs/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'devs/css/main.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
@@ -26,7 +27,7 @@
 
 
     <div class="container">
-        <div class="jumbotron mt-5">
+        <div class="jumbotron">
             <div class="d-flex flex-wrap justify-content-center">
                 <h1 class="display-3 w-100 text-center">Welcome to Devs on deck!</h1>
                 <p class="lead">Job-seeking developers can search for development jobs</p>
@@ -42,6 +43,7 @@
             
 
         </div>
+        <a href="{% url 'devs:languages' %}" class="d-block">Temp link to languages page</a>
         <a href="{% url 'devs:devreg' %}" class="d-block">Temp link to dev reg page</a>
         <a href="{% url 'devs:success' %}" class="d-block">Temp link to success page</a>
     </div>

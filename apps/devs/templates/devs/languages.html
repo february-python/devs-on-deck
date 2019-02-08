@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Devs on deck</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'devs/css/languages.css' %}">
+    <link rel="stylesheet" href="{% static 'devs/css/navbar.css' %}">
+    <script src="{% static 'devs/js/languages.js' %}"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+
+        <a class="navbar-brand text-light" href="">Devs on Deck</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+            <a href="{% url 'devs:index' %}" class="my-2 my-md-0 text-white">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+
+                    <div class="card-header">
+                        <h4 class="display-4">Add your skills</h4>
+                        <div class="meter orange nostripes">
+                            <span style="width: 33.3%"></span>
+                        </div>
+                            
+                    </div>
+
+                    <div class="card-body">
+                        
+                        
+                        
+                        <form name="my-form" action="" method="POST"> <!-- Needs URL -->
+                            <div class="form-group row">
+                                <label for="first_name" class="col-md-4 col-form-label text-md-right">First Name</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="first_name" class="form-control" name="first_name">
+                                </div>
+                            </div>
+                            
+
+                                <div class="col-md-6 offset-9 offset-md-7 offset-lg-8">
+                                    <button type="submit" class="btn btn-primary">Register</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
