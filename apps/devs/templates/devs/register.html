@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Devs on deck</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'devs/css/register.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+
+        <a class="navbar-brand text-light" href="">Devs on Deck</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+            <a href="{% url 'devs:index' %}" class="my-2 my-md-0 text-white">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5 devform d-flex justify-content-center">
+        <div class="p-4 text-center col-6">
+            <h4 class="display-4">Developer Sign-up</h4>
+            <form action="" class="form">
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name" id="first_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name="last_name" id="last_name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" name="address" id="address" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" name="city" id="city" class="form-control">
+                    <label for="state">State: </label>
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">State</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item">Action</a>
+                        <p class="dropdown-item">Another action</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
