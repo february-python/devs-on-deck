@@ -13,3 +13,6 @@ def devreg(request):
 def languages(request):
     return render(request, 'devs/languages.html')
 
+def frameworks(request):
+    return render(request, 'devs/frameworks.html')
+

@@ -30,7 +30,8 @@
                 <div class="card">
                     <div class="card-header">Register</div>
                     <div class="card-body">
-                        <form name="my-form" action="" method="POST"> <!-- Needs URL -->
+                        <form name="my-form"> <!-- Needs URL -->
+                            {% csrf_token %}
                             <div class="form-group row">
                                 <label for="first_name" class="col-md-4 col-form-label text-md-right">First Name</label>
                                 <div class="col-md-6">
@@ -141,7 +142,7 @@
                             </div>
 
                                 <div class="col-md-6 offset-9 offset-md-7 offset-lg-8">
-                                    <button type="submit" class="btn btn-primary">Register</button>
+                                    <button type="submit" class="btn btn-outline-danger">Register</button>
                                 </div>
                             </div>
                         </form>

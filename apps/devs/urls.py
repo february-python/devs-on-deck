@@ -6,4 +6,5 @@ urlpatterns = [
     url(r'^success/$', views.success, name="success"),
     url(r'^devreg/$', views.devreg, name="devreg"),
     url(r'^languages/$', views.languages, name="languages"),
+    url(r'^frameworks/$', views.frameworks, name="frameworks"),
 ]
