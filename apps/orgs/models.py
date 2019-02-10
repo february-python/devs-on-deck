@@ -47,6 +47,7 @@ class OrgManager(models.Manager):
             org_state       = form_data['ostate'],
             password        = pw_hash,  
         )
+        
 class Org(models.Model):
     org_name        =   models.CharField(max_length=255)
     first_name      =   models.CharField(max_length=255)

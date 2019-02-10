@@ -28,3 +28,15 @@ def org_login(request):
 def org_logoff(request):
     request.session.clear()
     return redirect('/orgs/login')
+
+def jobs_new(request):
+    return render(request, "orgs/jobs_new.html")
+
+def add_job(request):
+    errors = Org.objects.jobs.validate(request.POST)
+    if errors:
+        for error in errors:
+            messages.err(request, error)
+    else:
+        Org.objects.create_job(request.POST)
+    return redirect('/jobs/new/')
