@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/orgs.css' %}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap-theme.min.css" integrity="sha384-jzngWsPS6op3fgRCDTESqrEJwRKck+CILhJVO5VvaAZCq8JYf8HsR/HPpBOOPZfR" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw" crossorigin="anonymous"></script>
+    <title>Welcome to DevsOnDeck</title>
+</head>
+<body>
+    <div class="bigfont">Organization Signup</div>
+        <div class="container">
+                <div class="row">
+                {% if messages %}
+                <ul class='messages'>
+                {%for message in messages %}
+                    <li {% if message.tags %} class="{{ messages.tags }}"{% endif%}>
+                    {{ message }} 
+                    </li>
+                {% endfor%}
+                </ul>
+                {%endif%}
+                    <div class="subrow">
+                        <form class="form-horizontal" action="/orgs/org_register/" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for='org_name'>Org Name</label>
+                                <input  type="text" name="org_name" id="org_name" class="long">
+                            </div>
+                            <div class="col-md-5">
+                                <label for='fname'>First Name</label>
+                                <input type="text" name="fname" id="fname" class="names">
+                            </div>
+                            <div class="col-md-7">
+                                <label for="lname">Last Name</label>
+                                <input type="text" name="lname" id="lname" class="names">
+                            </div>
+                            <div class="form-group">
+                                <label for="cemail">Contact Email</label>
+                                <input type="text" name="cemail" id="cemail" class="long">
+                            </div>
+                            <div class="form-group">
+                                    <label for="oadd">Org Address</label>
+                                    <input type="text" name="oadd" id="oadd" class="long">
+                            </div>
+                            <div class="col-md-8">
+                                    <label for="ocity">Org City</label>
+                                    <input type="text" name="ocity" id="ocity" class="names">
+                            </div>
+                            <div class="col-md-4">
+                                    <label for="ostate">Org State</label>
+                                    <select name="ostate">
+                                            <option value="AL">AL</option>
+                                            <option value="AK">AK</option>
+                                            <option value="AZ">AZ</option>
+                                            <option value="AR">AR</option>
+                                            <option value="CA">CA</option>
+                                            <option value="CO">CO</option>
+                                            <option value="CT">CT</option>
+                                            <option value="DE">DE</option>
+                                            <option value="DC">DC</option>
+                                            <option value="FL">FL</option>
+                                            <option value="GA">GA</option>
+                                            <option value="HI">HI</option>
+                                            <option value="ID">ID</option>
+                                            <option value="IL">IL</option>
+                                            <option value="IN">IN</option>
+                                            <option value="IA">IA</option>
+                                            <option value="KS">KS</option>
+                                            <option value="KY">KY</option>
+                                            <option value="LA">LA</option>
+                                            <option value="ME">ME</option>
+                                            <option value="MD">MD</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MI">MI</option>
+                                            <option value="MN">MN</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MO">MO</option>
+                                            <option value="MT">MT</option>
+                                            <option value="NE">NE</option>
+                                            <option value="NV">NV</option>
+                                            <option value="NH">NH</option>
+                                            <option value="NJ">NJ</option>
+                                            <option value="NM">NM</option>
+                                            <option value="NY">NY</option>
+                                            <option value="NC">NC</option>
+                                            <option value="ND">ND</option>
+                                            <option value="OH">OH</option>
+                                            <option value="OK">OK</option>
+                                            <option value="OR">OR</option>
+                                            <option value="PA">PA</option>
+                                            <option value="RI">RI</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SD">SD</option>
+                                            <option value="TN">TN</option>
+                                            <option value="TX">TX</option>
+                                            <option value="UT">UT</option>
+                                            <option value="VT">VT</option>
+                                            <option value="VA">VA</option>
+                                            <option value="WA">WA</option>
+                                            <option value="WV">WV</option>
+                                            <option value="WI">WI</option>
+                                            <option value="WY">WY</option>
+                                        </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password</label>
+                                <input type="password" name="pwd" id="pwd" class="long">
+                            </div>
+                            <div class="form-group">
+                                    <label for="cpwd">Confirm PW</label>
+                                    <input type="password" name="cpwd" id="cpwd" class="long">
+                            </div>
+                            <input type="submit" value="Register" class="green">
+                        </form>
+                    </div>
+                </div>
+                <h5>Need to Sign Up as a Developer?</h5>
+            </div>
+    
+</body>
+</html>

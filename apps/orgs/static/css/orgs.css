@@ -1,0 +1,43 @@
+div.bigfont {
+    font-size: 76px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    width: 100px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+input.long {
+    height: 30px;
+    width: 500px;
+}
+
+form {
+    margin-left: 300px;
+}
+
+h5 {
+    text-align: center;
+}
+
+input.names {
+    height: 30px;
+}
+
+select.states {
+    height: 30px;
+}
+
+input.green {
+    background-color: green;
+    width: 125px;
+}
