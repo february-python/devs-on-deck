@@ -1,6 +1,6 @@
 .skills{
     
-    height: 50px;
+    height: 65px;
 }
 .lang-list{
     height: 180px;
@@ -8,6 +8,10 @@
     overflow-y: scroll;
 }
 .lang-list img{
+    width: 50px;
+    margin: 1px 1px 3px 1px;
+}
+.skills img{
     width: 50px;
     margin: 1px 1px 3px 1px;
 }
