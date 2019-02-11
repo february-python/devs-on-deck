@@ -62,4 +62,3 @@ def messages(req):
 
 def logout(req):
     return redirect('devs:index')
-
