@@ -1,5 +1,13 @@
 .navbar
 {
-    box-shadow: 0 2px 4px #ec0606;
-    margin-bottom: 50px;
+    box-shadow: 0 2px 4px #2300FF;
+}
+body{
+    background-color: #DCDADB;
+    color: #524D5C;
+}
+.container{
+    background-color: #D2CECA;
+    padding-top: 50px;
+    min-height: 100vh;
 }

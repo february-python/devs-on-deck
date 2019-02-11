@@ -14,3 +14,6 @@
 textarea{
     resize: none;
 }
+.inspiration{
+    min-height: 235px;
+}

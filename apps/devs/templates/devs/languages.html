@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
 
-        <a class="navbar-brand text-light" href="">Devs on Deck</a>
+        <a class="navbar-brand text-light">Devs on Deck</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,7 +20,7 @@
             <ul class="navbar-nav mr-auto">
 
             </ul>
-            <a href="{% url 'devs:index' %}" class="my-2 my-md-0 text-white">Logout</a>
+            <!-- <a href="{% url 'devs:index' %}" class="my-2 my-md-0 text-white">Logout</a> -->
         </div>
     </nav>
 
@@ -85,18 +85,17 @@
                                     
         
                                     <div class="d-flex flex-row-reverse">
-                                        <button type="submit" class="btn btn-outline-danger">Continue to next step</button>
+                                        <a class="btn btn-outline-danger" href="{% url 'devs:addlanguages' %}">Continue to next step</a>
                                     </div>
                                 </form>
                                 <div class="d-flex flex-row-reverse mt-2">
-                                    <button type="submit" class="btn btn-outline-danger">Skip this step</button>
+                                    <a class="btn btn-outline-danger" href="{% url 'devs:frameworks' %}">Skip this step</a>
                                 </div>
                             </div>
                         </div>
 
                     </div>  
                 </div> <!--card-->
-                <a href="{% url 'devs:frameworks' %}" class="d-block">Temp link to frameworks page</a>
             </div> <!--main column-->
         </div> <!--main row-->
     </div> <!-- Container -->

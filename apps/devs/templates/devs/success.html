@@ -7,15 +7,15 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     {% load static %}
     <link rel="stylesheet" href="{% static 'devs/css/navbar.css' %}">
-    <link rel="stylesheet" href="{% static 'users/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'devs/css/main.css' %}">
 
-    <!-- <meta http-equiv="refresh" content="3;url=NEEDS URL" /> -->
+    <meta http-equiv="refresh" content="3;url={% url 'devs:dashboard' %}" />
 
 </head>
 <body>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
 
-        <a class="navbar-brand text-light" href="">Devs on Deck</a>
+        <a class="navbar-brand text-light" href="{% url 'devs:dashboard' %}">Devs on Deck</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,12 +24,13 @@
             <ul class="navbar-nav mr-auto">
 
             </ul>
-            <a href="{% url 'devs:index' %}" class="my-2 my-md-0 text-white">Logout</a>
+            <a href="{% url 'devs:logout' %}" class="my-2 my-md-0 text-white">Logout</a>
         </div>
     </nav>
 
-    <div class="container d-flex justify-content-center mt-5">
-        <h1>Success! Welcome <!-- Needs request.session.first_name added--> </h1>
+    <div class="container d-flex flex-column align-items-center">
+        <h1>Success! Welcome {{request.session.first_name}} </h1>
+        <p>If not redirected in 3 seconds, click <a href="{% url 'devs:dashboard' %}">here</a>.</p>
     </div>
 
 

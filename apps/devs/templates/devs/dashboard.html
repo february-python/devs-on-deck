@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Devs on deck</title>
+<link href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS' crossorigin='anonymous'>
+{% load static %}
+<link rel='stylesheet' href="{% static 'devs/css/navbar.css' %}">
+<link rel='stylesheet' href="{% static 'devs/css/dashboard.css' %}">
+</head>
+<body>
+    <nav class='navbar navbar-expand navbar-dark bg-dark'>
+        <a class='navbar-brand text-light' href="{% url 'devs:dashboard' %}">Devs on Deck</a>
+        <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarsExample02' aria-controls='navbarsExample02' aria-expanded='false' aria-label='Toggle navigation'>
+            <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarsExample02'>
+            <ul class='navbar-nav mr-auto'>
+            </ul>
+            <a href="{% url 'devs:logout' %}" class='my-2 my-md-0 text-white'>Logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>Positions To Fill</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="">Front-End Developer</a></li>
+                            <li><a href="">Back-End Developer</a></li>
+                            <li><a href="">Full Stack Developer</a></li>
+                            <li><a href="">Front-End Developer</a></li>
+                            <li><a href="">Back-End Developer</a></li>
+                            <li><a href="">Full Stack Developer</a></li>
+                            <li><a href="">Front-End Developer</a></li>
+                            <li><a href="">Back-End Developer</a></li>
+                            <li><a href="">Full Stack Developer</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-5">
+                    <div class="card-header text-center">
+                        <h4>Your Profile</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Name: Joe User</p>
+                        <p>Email: test@test.com</p>
+                        <p>Short Bio</p>
+                        <p>“No matter how busy you make think you are you must find time for reading, or surrender yourself to self-chosen ignorance.” - Confucius</p>
+                        <div class="skills ">
+                            <img src="{% static 'devs/img/python.png' %}" alt="">
+                            <img src="{% static 'devs/img/django.png' %}" alt="">
+                            <img src="{% static 'devs/img/HTML.png' %}" alt="">
+                            <img src="{% static 'devs/img/CSS.png' %}" alt="">
+                            <img src="{% static 'devs/img/mysql.png' %}" alt="">
+                            <img src="{% static 'devs/img/bootstrap.png' %}" alt="">
+                            <img src="{% static 'devs/img/JavaScript.png' %}" alt="">
+                            <img src="{% static 'devs/img/jQuery.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header text-center">
+                <h4>Messages for you</h4>
+            </div>
+            <div class="card-body">
+                <div class="border p-2"> 
+                    <table class="table table-bordered">
+                        <thead>
+                            <th><h5>Sender</h5></th>
+                            <th><h5>Subject</h5></th>
+                            <th><h5>Actions</h5></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="m-0 p-0">
+                                    <p class="p-0 m-0">From: Jane Smith, HR</p>
+                                    <p class="p-0 my-0 ml-5 text-black-50">Sent 45 minutes ago</p>
+                                </td>
+                                <td>Job Offer</td>
+                                <td>
+                                    <a href="{% url 'devs:messages' %}">Read</a>
+                                    <a href="">Delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
