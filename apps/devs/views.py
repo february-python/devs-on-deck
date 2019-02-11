@@ -1,28 +1,28 @@
 from django.shortcuts import render, redirect
 from .models import *
-from django.contrib import messages
+from django.contrib import messages as error_messages
 
 def register(req):
     return render(req, 'devs/register.html')
 
 def create_dev(req):
-    errors = Dev.objects.validate_registration
+    errors = Dev.objects.validate_registration(req.POST)
     if errors:
         for error in errors:
-            messages.error(req, error)
+            error_messages.error(req, error)
         return redirect('devs:register')
     dev = Dev.objects.create_dev(req.POST)
     req.session['dev_id'] = dev.id
-    return redirect('devs:success')
+    return redirect('devs:languages')
 
 def login(req):
     return render(req, 'devs/login.html')
 
 def login_dev(req):
-    errors = Dev.objects.validate_login
+    errors = Dev.objects.validate_login(req.POST)
     if errors:
         for error in errors:
-            message.error(req, error)
+            error_messages.error(req, error)
         return redirect('devs:login')
     dev = Dev.objects.get(email=req.POST['email'])
     req.session['dev_id'] = dev.id
@@ -32,8 +32,8 @@ def login_dev(req):
 
 # added with templates
 def dashboard(req):
-    # if 'dev_id' not in req.session:
-    #     return redirect('devs:index')
+    if 'dev_id' not in req.session:
+        return redirect('devs:index')
     return render(req, 'devs/dashboard.html')
 
 def index(req):
@@ -61,4 +61,5 @@ def messages(req):
     return render(req, 'devs/messages.html')
 
 def logout(req):
+    req.session.clear()
     return redirect('devs:index')
