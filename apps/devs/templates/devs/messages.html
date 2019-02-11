@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Devs on deck</title>
+<link href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS' crossorigin='anonymous'>
+{% load static %}
+<link rel='stylesheet' href="{% static 'devs/css/navbar.css' %}">
+<link rel='stylesheet' href="{% static 'devs/css/messages.css' %}">
+</head>
+<body>
+    <nav class='navbar navbar-expand navbar-dark bg-dark'>
+        <a class='navbar-brand text-light' href="{% url 'devs:dashboard' %}">Devs on Deck</a>
+        <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarsExample02' aria-controls='navbarsExample02' aria-expanded='false' aria-label='Toggle navigation'>
+            <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarsExample02'>
+            <ul class='navbar-nav mr-auto'>
+            </ul>
+            <a href="{% url 'devs:index' %}" class='my-2 my-md-0 text-white'>Logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Messages</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Sender</th>
+                                    <th>Subject</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jane Smith</td>
+                                    <td><a href="">Job Offer</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <a href="">Reply</a>
+                        <a href="">Delete</a>
+                        <div class="message">
+                            <!-- Add template language for the message that is selected -->
+                            <h4>Subject: Job Offer</h4>
+                            <p>Hi Developer!  We have selected you for a mission of utmost importance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="reply d-flex flex-column">
+                            <!-- Add template language for the message that is selected -->
+                            <h4>Subject: Re: Job Offer</h4>
+                            <textarea name="reply" id="reply" cols="70" rows="10">                                                                                  
+
+
+                                
+---------------------------------------------------------
+Hi Developer!  We have selected you for a mission of utmost importance.
+                            </textarea>
+                            <button class="btn btn-outline-danger align-self-end mt-2">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

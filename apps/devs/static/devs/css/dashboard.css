@@ -1,0 +1,8 @@
+.skills{
+    border: 2px solid silver;
+    padding: 5px;
+}
+.skills img{
+    width: 50px;
+    margin: 1px;
+}

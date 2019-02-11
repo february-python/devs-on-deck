@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Devs on deck</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'devs/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'devs/css/languages.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+
+        <a class="navbar-brand text-light">Devs on Deck</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav mr-auto">
+
+            </ul>
+            <!-- <a href="{% url 'devs:index' %}" class="my-2 my-md-0 text-white">Logout</a> -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+
+                    <div class="card-header">
+                        <h4 class="text-center display-4">Add your skills</h4>
+                        <div class="progress my-3">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="40"
+                            aria-valuemin="0" aria-valuemax="100" style="width:33%">
+                              Step 2
+                            </div>
+                        </div>
+                            
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col text-center">
+                                <h4 class="my-2">Pick Your Top 5 Languages</h4>
+                                <div class="form-control lang-list">
+                                    <img src="{% static 'devs/img/ajax.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/angular.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/bootstrap.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/codeigniter.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/codepen.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/c-sharp.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/CSS.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/d3.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/django.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/expressjs.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/github.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/html.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/iOS-Swift.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/JavaScript.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/jQuery.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/LAMP.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/materialize.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/MEAN.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/mysql.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/nodejs.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/php.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/python.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/RUBY.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/socket.PNG' %}" alt="">
+                                    <img src="{% static 'devs/img/sqlite.PNG' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <form action="" method="POST"> <!-- Needs URL -->
+                                    <div class="form-group form-control skills">
+                                        
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <label for="first_name"><h4>Short Bio</h4></label>
+                                        <textarea id="first_name" class="form-control" name="first_name" cols="20" rows="5"></textarea>
+                                    </div>
+                                    
+        
+                                    <div class="d-flex flex-row-reverse">
+                                        <a class="btn btn-outline-danger" href="{% url 'devs:addlanguages' %}">Continue to next step</a>
+                                    </div>
+                                </form>
+                                <div class="d-flex flex-row-reverse mt-2">
+                                    <a class="btn btn-outline-danger" href="{% url 'devs:frameworks' %}">Skip this step</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>  
+                </div> <!--card-->
+            </div> <!--main column-->
+        </div> <!--main row-->
+    </div> <!-- Container -->
+
+
+</body>
+</html>

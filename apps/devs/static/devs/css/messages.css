@@ -1,0 +1,13 @@
+.message{
+    border: 2px inset rgb(173, 3, 3);
+    min-height: 400px;
+    padding: 10px;
+}
+.reply{
+    border: 2px inset rgb(173, 3, 3);
+    min-height: 400px;
+    padding: 10px;
+}
+textarea{
+    resize: none;
+}

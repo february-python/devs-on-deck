@@ -1,0 +1,19 @@
+.skills{
+    
+    height: 50px;
+}
+.lang-list{
+    height: 180px;
+    margin-top: 28px;
+    overflow-y: scroll;
+}
+.lang-list img{
+    width: 50px;
+    margin: 1px 1px 3px 1px;
+}
+textarea{
+    resize: none;
+}
+.inspiration{
+    min-height: 235px;
+}
