@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Devs on deck</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'devs/css/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'devs/css/languages.css' %}">
+    <script src="{% static 'devs/js/main.js' %}"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand navbar-dark bg-dark">
@@ -46,31 +48,31 @@
                             <div class="col text-center">
                                 <h4 class="my-2">Pick Your Top 5 Frameworks or Libraries</h4> <!-- Needs separated into languages -->
                                 <div class="form-control lang-list">
-                                    <img src="{% static 'devs/img/ajax.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/angular.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/bootstrap.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/codeigniter.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/codepen.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/c-sharp.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/CSS.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/d3.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/django.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/expressjs.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/github.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/html.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/iOS-Swift.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/JavaScript.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/jQuery.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/LAMP.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/materialize.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/MEAN.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/mysql.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/nodejs.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/php.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/python.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/RUBY.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/socket.PNG' %}" alt="">
-                                    <img src="{% static 'devs/img/sqlite.PNG' %}" alt="">
+                                    <img class="skill" skill="ajax" src="{% static 'devs/img/ajax.png' %}" alt="">
+                                    <img class="skill" skill="angular" src="{% static 'devs/img/angular.png' %}" alt="">
+                                    <img class="skill" skill="bootstrap" src="{% static 'devs/img/bootstrap.png' %}" alt="">
+                                    <img class="skill" skill="codeigniter" src="{% static 'devs/img/codeigniter.png' %}" alt="">
+                                    <img class="skill" skill="codepen" src="{% static 'devs/img/codepen.png' %}" alt="">
+                                    <img class="skill" skill="c-sharp" src="{% static 'devs/img/c-sharp.png' %}" alt="">
+                                    <img class="skill" skill="css" src="{% static 'devs/img/css.png' %}" alt="">
+                                    <img class="skill" skill="d3" src="{% static 'devs/img/d3.png' %}" alt="">
+                                    <img class="skill" skill="django" src="{% static 'devs/img/django.png' %}" alt="">
+                                    <img class="skill" skill="expressjs" src="{% static 'devs/img/expressjs.png' %}" alt="">
+                                    <img class="skill" skill="github" src="{% static 'devs/img/github.png' %}" alt="">
+                                    <img class="skill" skill="html" src="{% static 'devs/img/html.png' %}" alt="">
+                                    <img class="skill" skill="ios-swift" src="{% static 'devs/img/ios-swift.png' %}" alt="">
+                                    <img class="skill" skill="javascript" src="{% static 'devs/img/javascript.png' %}" alt="">
+                                    <img class="skill" skill="jquery" src="{% static 'devs/img/jquery.png' %}" alt="">
+                                    <img class="skill" skill="lamp" src="{% static 'devs/img/lamp.png' %}" alt="">
+                                    <img class="skill" skill="materialize" src="{% static 'devs/img/materialize.png' %}" alt="">
+                                    <img class="skill" skill="mean" src="{% static 'devs/img/mean.png' %}" alt="">
+                                    <img class="skill" skill="mysql" src="{% static 'devs/img/mysql.png' %}" alt="">
+                                    <img class="skill" skill="nodejs" src="{% static 'devs/img/nodejs.png' %}" alt="">
+                                    <img class="skill" skill="php" src="{% static 'devs/img/php.png' %}" alt="">
+                                    <img class="skill" skill="python" src="{% static 'devs/img/python.png' %}" alt="">
+                                    <img class="skill" skill="ruby" src="{% static 'devs/img/ruby.png' %}" alt="">
+                                    <img class="skill" skill="socket" src="{% static 'devs/img/socket.png' %}" alt="">
+                                    <img class="skill" skill="sqlite" src="{% static 'devs/img/sqlite.png' %}" alt="">
                                 </div>
                             </div>
                             <div class="col">
