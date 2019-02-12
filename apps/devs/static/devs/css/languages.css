@@ -1,13 +1,17 @@
 .skills{
     
-    height: 50px;
+    height: 65px;
 }
-.lang-list{
+.skill-list{
     height: 180px;
     margin-top: 28px;
     overflow-y: scroll;
 }
-.lang-list img{
+.skill-list img{
+    width: 50px;
+    margin: 1px 1px 3px 1px;
+}
+.skills img{
     width: 50px;
     margin: 1px 1px 3px 1px;
 }
